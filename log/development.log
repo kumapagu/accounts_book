@@ -1,0 +1,2 @@
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE DATABASE `accounts_book_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `accounts_book_test` DEFAULT CHARACTER SET `utf8mb4`[0m
