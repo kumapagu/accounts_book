@@ -1,2 +1,17 @@
   [1m[35m (9.6ms)[0m  [1m[35mCREATE DATABASE `accounts_book_development` DEFAULT CHARACTER SET `utf8mb4`[0m
   [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `accounts_book_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for ::1 at 2022-02-18 14:54:03 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yamaguchimika/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.4.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yamaguchimika/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.4.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.6ms | Allocations: 190)
+Completed 200 OK in 29ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 1018)
+
+
+Started GET "/" for ::1 at 2022-02-18 15:04:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yamaguchimika/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.4.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yamaguchimika/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.4.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 8)
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 528)
+
+
+Migrating to CreateIncomes (20220218065215)
