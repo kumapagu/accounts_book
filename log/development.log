@@ -597,3 +597,37 @@ Processing by IncomesController#index as HTML
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5924)
 
 
+Started GET "/incomes/index" for ::1 at 2022-02-24 16:08:00 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 201)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/takedawashin/projects/accounts_book/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: c9f1d357ccd24bb77d58
+Version: webpack 4.46.0
+Time: 1602ms
+Built at: 2022/02/24 16:08:04
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4f56a5f2657319414717.js    871 KiB  application  [emitted] [immutable]  application
+js/application-4f56a5f2657319414717.js.map    874 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4f56a5f2657319414717.js js/application-4f56a5f2657319414717.js.map
+[./app/javascript/calendar.js] 394 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 774 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 19 hidden modules
+
+Completed 200 OK in 3570ms (Views: 3563.4ms | ActiveRecord: 0.0ms | Allocations: 1718870)
+
+
