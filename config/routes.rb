@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'incomes/index'
+  root to: 'incomes#index'
+  resources :incomes, :expenses, except: [:index]
 
   devise_for :users
 end
