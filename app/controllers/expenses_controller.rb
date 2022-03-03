@@ -1,7 +1,4 @@
-class IncomesController < ApplicationController
-  def index
-  end
-
+class ExpensesController < ApplicationController
   def show
   end
 
@@ -19,5 +16,4 @@ class IncomesController < ApplicationController
 
   def destroy
   end
-  
 end
