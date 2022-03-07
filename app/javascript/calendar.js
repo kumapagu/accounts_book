@@ -8,9 +8,16 @@ window.addEventListener('load', function () {
   var calendar = new Calendar(calendarEl, {
     plugins: [dayGridPlugin, interactionPlugin],
     dateClick(e){
-      console.log(e)
-      // ここにformData記載する？
-      // イベントで取得したデータをGETリクエストで送って返ってきたデータを表示させる
+      console.log(e);
+      // カレンダークリック時のリクエスト
+      const dayData = e;
+      const formData = new FormData(dayData);
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', '/', true);
+      xhr.responseType = 'json';
+      xhr.send(formData)
+      
+      
     }
   });
 
