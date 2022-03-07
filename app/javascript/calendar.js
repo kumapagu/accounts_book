@@ -1,6 +1,7 @@
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { create } from 'enhanced-resolve';
 
 window.addEventListener('load', function () {
   var calendarEl = document.getElementById('calendar');
@@ -15,9 +16,21 @@ window.addEventListener('load', function () {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', '/', true);
       xhr.responseType = 'json';
-      xhr.send(formData)
+      xhr.send(formData);
       
-      
+      // 受信したデータの処理
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const card = xhr.response;
+            const html = createHTML(card); // ビューができたタイミングでHTMLを作成する関数を追加する
+            // 作成したHTMLを追加する処理を記述
+
+          } else {
+            alert('error');
+          }
+        }
+      };
     }
   });
 
