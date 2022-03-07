@@ -20,4 +20,11 @@ class IncomesController < ApplicationController
   def destroy
   end
   
+
+  private
+
+  def income_params
+    params.require(:income).permit(:date, :amount, :income_item_id, :memo).merge(user_id: current_user.id)
+  end
+
 end
