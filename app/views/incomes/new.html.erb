@@ -1,0 +1,19 @@
+<%= form_with local: true do |f| %>
+ <div>日付</div>
+  <%= raw sprintf(
+      f.date_select(
+          :date,
+          use_month_numbers: true, # jan, febとかじゃなくて数字で月を表現
+          start_year:     2000, # 何年から表示させるか
+          end_year:       (Time.now.year), # 何年まで表示させるか
+          default:        Date.today, # 最初に表示されている年月日
+          date_separator:    '%s'), # 年月日区切りをそれぞれ指定
+              '年 ', '月 ') + '日'
+  %>
+  <div>金額</div>
+  <%= f.text_field :amount %>
+  <div>収入項目</div>
+  <%= f.collection_select(:income_item_id, IncomeItem.all, :id, :name, {}, {class: "select-box"} ) %>
+  <div>メモ</div>
+  <%= f.text_area :memo %>
+<% end %>

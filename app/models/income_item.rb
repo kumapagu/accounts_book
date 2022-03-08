@@ -6,6 +6,6 @@ class IncomeItem < ActiveHash::Base
     { id: 4, name: 'その他' }
   ]
 
-  include ActiveHash::Asociations
+  include ActiveHash::Associations
   has_many :incomes
 end
