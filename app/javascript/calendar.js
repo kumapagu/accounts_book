@@ -1,7 +1,6 @@
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import { create } from 'enhanced-resolve';
 
 window.addEventListener('load', function () {
   var calendarEl = document.getElementById('calendar');
@@ -10,7 +9,7 @@ window.addEventListener('load', function () {
     plugins: [dayGridPlugin, interactionPlugin],
     dateClick(e){
       console.log(e);
-      // カレンダークリック時のリクエスト
+      カレンダークリック時のリクエスト
       const dayData = e;
       const formData = new FormData(dayData);
       const xhr = new XMLHttpRequest();
@@ -32,7 +31,7 @@ window.addEventListener('load', function () {
         }
       };
     }
-  });
+  })
 
   calendar.render();
 });
