@@ -1,0 +1,27 @@
+.main {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list {
+  background-color: skyblue;
+  flex-basis: 40%;
+}
+
+.month-list {
+  list-style: none;
+}
+
+.card {
+  margin: 10px;
+}
+
+.calendar {
+  background-color: bisque;
+  flex-basis: 60%;
+}
+
+.input {
+  color: orange;
+}
