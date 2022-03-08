@@ -16,4 +16,10 @@ class ExpensesController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def expense_params
+    params.require(:expense).permit(:date, :amount, :expenditure_item_id, :memo).merge(user_id: current_user.id)
+  end
 end
