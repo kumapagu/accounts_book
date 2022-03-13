@@ -16,4 +16,5 @@
   <%= f.collection_select(:income_item_id, IncomeItem.all, :id, :name, {}, {class: "select-box"} ) %>
   <div>メモ</div>
   <%= f.text_area :memo %>
+  <%= f.submit "登録する", class:"submit-btn"%>
 <% end %>
