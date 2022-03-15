@@ -6,9 +6,16 @@ class IncomesController < ApplicationController
   end
 
   def new
+    @income = Income.new
   end
 
   def create
+    @income = Income.new(income_params)
+    if @income.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit

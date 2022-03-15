@@ -1,4 +1,4 @@
-<%= form_with local: true do |f| %>
+<%= form_with model: @income, url: incomes_path, local: true do |f| %>
  <div>日付</div>
   <%= raw sprintf(
       f.date_select(
@@ -16,4 +16,5 @@
   <%= f.collection_select(:income_item_id, IncomeItem.all, :id, :name, {}, {class: "select-box"} ) %>
   <div>メモ</div>
   <%= f.text_area :memo %>
+  <%= f.submit "登録する", class:"submit-btn"%>
 <% end %>
