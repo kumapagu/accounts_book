@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_02_18_065744) do
 
-  create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date", null: false
     t.integer "amount", null: false
     t.integer "expenditure_item_id", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_02_18_065744) do
     t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
-  create_table "incomes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "incomes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date", null: false
     t.integer "amount", null: false
     t.integer "income_item_id", null: false
@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 2022_02_18_065744) do
     t.index ["user_id"], name: "index_incomes_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", limit: 255, default: "", null: false
+    t.string "encrypted_password", limit: 255, default: "", null: false
+    t.string "reset_password_token", limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
