@@ -4,12 +4,28 @@ import interactionPlugin from '@fullcalendar/interaction';
 
 window.addEventListener('load', function () {
   var calendarEl = document.getElementById('calendar');
+  // incomeのデータをeventsに入れる
+  const events = [];
+  gon.incomes.forEach((income) => {
+    events.push({
+      title: income.total_amount,
+      start: income.date,
+      end: income.date,
+      backgroundColor: '#d1ffff',
+      borderColor: '#d1ffff',
+      textColor: 'blue'
+    });
+  });
+
+  // expenseのデータをeventsに入れる
 
   var calendar = new Calendar(calendarEl, {
     plugins: [dayGridPlugin, interactionPlugin],
+    // イベントの情報にeventsデータを指定する
+    events: events,
     dateClick(e){
       console.log(e);
-      カレンダークリック時のリクエスト
+      // カレンダークリック時のリクエスト
       const dayData = e;
       const formData = new FormData(dayData);
       const xhr = new XMLHttpRequest();
@@ -30,7 +46,7 @@ window.addEventListener('load', function () {
           }
         }
       };
-    }
+    },
   })
 
   calendar.render();
