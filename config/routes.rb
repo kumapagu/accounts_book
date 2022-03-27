@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'incomes#index'
 
-  resources :incomes, :expenses
+  resources :incomes, :expenses do
 
     collection do
       get 'card'
