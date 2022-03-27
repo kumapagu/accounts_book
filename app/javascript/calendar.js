@@ -24,28 +24,42 @@ window.addEventListener('load', function () {
     // イベントの情報にeventsデータを指定する
     events: events,
     dateClick(e){
-      console.log(e);
-      // カレンダークリック時のリクエスト
-      const dayData = e;
-      const formData = new FormData(dayData);
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', '/', true);
-      xhr.responseType = 'json';
-      xhr.send(formData);
-      
-      // 受信したデータの処理
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            const card = xhr.response;
-            const html = createHTML(card); // ビューができたタイミングでHTMLを作成する関数を追加する
-            // 作成したHTMLを追加する処理を記述
-
-          } else {
-            alert('error');
+      // カレンダーをクリックして取得した日付データを付けてcardアクションへリクエストを送る
+      $.ajax({
+        url: 'incomes/card/',
+        type: 'get',
+        async: true,
+        data: { date: e.dateStr, }
+      })
+      // 通信がうまくいった場合の処理
+      .done(function(response) {
+        // カードリストの日付を表示
+        $('#date').html(e.dateStr)
+        // カードの要素を全て削除
+        $('#list').html('')
+        // レスポンスのデータを追加していく。ActiveHashの名前を取得できなかったのでifで条件分岐により実装してみた
+        $.each(response, function(index, val) {
+          if (val['income_item_id'] === 2){
+          $('#list').append(`
+          <li class="list-group-item">給料: ${val['amount']}円</li>
+          `)
           }
-        }
-      };
+          if (val['income_item_id'] === 3){
+            $('#list').append(`
+            <li class="list-group-item">臨時収入: ${val['amount']}円</li>
+            `)
+          }
+          if (val['income_item_id'] === 4){
+            $('#list').append(`
+            <li class="list-group-item">その他: ${val['amount']}円</li>
+            `)
+          }
+        })
+      })
+      // 通信に失敗したらアラート
+      .fail(function() {
+        alert('error');
+      });
     },
   })
 
