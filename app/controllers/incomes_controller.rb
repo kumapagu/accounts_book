@@ -35,7 +35,7 @@ class IncomesController < ApplicationController
 
   def destroy
   end
-  
+
   def card
     date = params[:date]
     day_income = ActiveRecord::Base.connection.select_all("SELECT amount, income_item_id, memo FROM Incomes WHERE date = '#{date}'")

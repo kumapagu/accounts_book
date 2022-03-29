@@ -1,6 +1,6 @@
 <div class="modal-body">
 
-  <%= form_with model: @income, url: incomes_path, local: true do |f| %>
+  <%= form_with model: @expense, url: expenses_path, local: true do |f| %>
 
     <%# 日付入力フォーム %>
     <div class="date-contents">
@@ -26,8 +26,8 @@
 
     <%#カテゴリー入力フォーム%>
     <div class="category-contents">
-      <div class="new-text">収入項目</div>
-      <%= f.collection_select(:income_item_id, IncomeItem.all, :id, :name, {}, {class: "select-box"} ) %>
+      <div class="new-text">支出項目</div>
+      <%= f.collection_select(:expenditure_item_id, ExpenditureItem.all, :id, :name, {}, {class: "select-box"} ) %>
     </div>
 
     <%# メモ入力フォーム%>
