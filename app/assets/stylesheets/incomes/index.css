@@ -1,3 +1,7 @@
+body {
+  background-color: 	#F2F2F7;
+}
+
 .main {
   background-color: yellow;
   display: flex;
@@ -21,4 +25,31 @@
 .card {
   margin: 10px;
 }
+
+.modal-header{
+  background-color: #c7f1ff;
+}
+
+.navbar {
+  background-color: #c7f1ff;
+}
+
+.navbar-light .navbar-brand{
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.navbar-light .navbar-toggler{
+  border: none;
+}
+
+.rounded-circle{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #c7f1ff;
+  color: rgba(0, 0, 0, 0.55);
+  border: none;
+}
+
+
 

@@ -1,0 +1,64 @@
+.modal-body{
+  width: 98%;
+  height: 98%;
+}
+
+.new-text{
+ font-size: 18px;
+ width: 30%;
+}
+
+.date-contents{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+/*反応しない*/
+.date-form{
+  width: 68%;
+}
+
+.amount-contents{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.amount-form{
+  height: 24px;
+  width: 68%;
+}
+
+.category-contents{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.select-box{
+  width: 68%;
+}
+
+.memo-contents{
+  margin-bottom: 2%;
+}
+.memo-form{
+  height: 200px;
+  width: 98%;
+}
+
+.submit-btn{
+  height: 50px;
+  width: 98%;
+  background-color: #c7f1ff;
+  border: white;
+  border-radius:5px;
+}
+
+.nav-link{
+  color: rgba(0, 0, 0, 0.55);
+}
+.nav-link:hover{
+  color: rgba(0, 0, 0, 0.55);
+}
