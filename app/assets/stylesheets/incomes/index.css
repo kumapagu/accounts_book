@@ -3,19 +3,45 @@ body {
 }
 
 .main {
-  background-color: yellow;
+  /*background-color: yellow;*/
   display: flex;
   justify-content: space-around;
 }
 
+.navbar-brand{
+  margin: auto;
+}
+
 .calendar {
-  background-color: bisque;
+  margin-top: 7px;
+  background-color: white;
   flex-basis: 60%;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  /*border-radius: 2%;*/
+}
+/*カレンダー土曜日*/
+.fc-day-sat {
+  background-color: #eaf4ff;
+}
+/*カレンダー日曜日*/
+.fc-day-sun {
+  background-color: #ffeaea;
 }
 
 .list {
-  background-color: skyblue;
+  /*background-color: skyblue;*/
   flex-basis: 40%;
+}
+
+.card-header{
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  border-radius: 3%;
+  background-color: #c7f1ff;
+}
+
+.list-group{
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  border-radius: 3%;
 }
 
 .month-list {
@@ -31,7 +57,7 @@ body {
 }
 
 .navbar {
-  background-color: #c7f1ff;
+  /*background-color: #c7f1ff;*/
 }
 
 .navbar-light .navbar-brand{
