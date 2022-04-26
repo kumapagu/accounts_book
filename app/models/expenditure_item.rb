@@ -18,6 +18,6 @@ class ExpenditureItem < ActiveHash::Base
     { id: 16, name: 'その他' }
   ]
 
-  include ActiveHash::Asociations
+  include ActiveHash::Associations
   has_many :expenses
 end
