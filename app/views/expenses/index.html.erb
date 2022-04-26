@@ -1,0 +1,11 @@
+<%# // ヘッダーapplicationに記述する  %>
+
+
+<%= link_to "前の月のリンク",expenses_path(month:@month.prev_month) %>
+
+<%= link_to "次の月のリンク",expenses_path(month:@month.next_month) %>
+
+
+<%= pie_chart @incomes.group(:income_item_id).sum(:amount), donut: true %>
+
+<%= pie_chart @incomesmonthly, donut: true %>
