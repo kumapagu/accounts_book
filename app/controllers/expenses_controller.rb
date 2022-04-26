@@ -10,7 +10,7 @@ class ExpensesController < ApplicationController
     @incomesmonthly = incomesmonthly(fulfilling)
     #支出 
     @expenses = Expense.where(date: @month.all_month) #取得した時刻が含まれる月の範囲のデータを取得
-    fulfilling = @expenses.pluck(:expense_item_id,:amount) #pluckで配列として取り出し
+    fulfilling = @expenses.pluck(:expenditure_item_id,:amount) #pluckで配列として取り出し
     @expensesmonthly = expensesmonthly(fulfilling)
 
   end
