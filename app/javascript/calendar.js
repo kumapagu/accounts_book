@@ -4,6 +4,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 
 window.addEventListener('load', function () {
   var calendarEl = document.getElementById('calendar');
+  // 選択した日付部分色付けようの変数を宣言
+  let dateVal
   // incomeのデータをeventsに入れる
   const events = [];
   gon.incomes.forEach((income) => {
@@ -11,13 +13,23 @@ window.addEventListener('load', function () {
       title: income.total_amount,
       start: income.date,
       end: income.date,
-      backgroundColor: '#d1ffff',
-      borderColor: '#d1ffff',
+      backgroundColor: '#bbe2f1',
+      borderColor: '#bbe2f1',
       textColor: 'blue'
     });
   });
 
   // expenseのデータをeventsに入れる
+  gon.expenses.forEach((expense) => {
+    events.push({
+      title: expense.total_amount,
+      start: expense.date,
+      end: expense.date,
+      backgroundColor: '#fdede4',
+      borderColor: '#fdede4',
+      textColor: 'red'
+    });
+  });
 
   var calendar = new Calendar(calendarEl, {
     plugins: [dayGridPlugin, interactionPlugin],
@@ -55,33 +67,117 @@ window.addEventListener('load', function () {
         .done(function (response) {
           // カードリストの日付を表示
           $('#date').html(e.dateStr)
-          // カードの要素を全て削除
-          $('#list').html('')
+          // 収入エリアのカードの要素を全て削除
+          $('#income-list').html('')
+          $('#expense-list').html('')
           // レスポンスのデータを追加していく。ActiveHashの名前を取得できなかったのでifで条件分岐により実装してみた
           $.each(response, function (index, val) {
-            if (val['income_item_id'] === 2) {
-              $('#list').append(`
-          <li class="list-group-item">給料: ${val['amount']}円</li>
-          `)
+            if ('income_item_id' in val) { // income_item_idのキーがあればincome-listへappend
+              if (val['income_item_id'] === 2) {
+                $('#income-list').append(`
+                <li class="list-group-item">給料: ${val['amount']}円</li>
+                `)
+              }
+              if (val['income_item_id'] === 3) {
+                $('#income-list').append(`
+              <li class="list-group-item">臨時収入: ${val['amount']}円</li>
+              `)
+              }
+              if (val['income_item_id'] === 4) {
+                $('#income-list').append(`
+              <li class="list-group-item">その他: ${val['amount']}円</li>
+              `)
+              }
             }
-            if (val['income_item_id'] === 3) {
-              $('#list').append(`
-            <li class="list-group-item">臨時収入: ${val['amount']}円</li>
-            `)
-            }
-            if (val['income_item_id'] === 4) {
-              $('#list').append(`
-            <li class="list-group-item">その他: ${val['amount']}円</li>
-            `)
+            if ('expenditure_item_id' in val) { // expenditure_item_idのキーがあればexpense-listへappend
+              if (val['expenditure_item_id'] === 2) {
+                $('#expense-list').append(`
+                <li class="list-group-item">食費: ${val['amount']}円</li>
+                `)
+              }
+              if (val['expenditure_item_id'] === 3) {
+                $('#expense-list').append(`
+              <li class="list-group-item">日用品: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 4) {
+                $('#expense-list').append(`
+              <li class="list-group-item">交通費: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 5) {
+                $('#expense-list').append(`
+              <li class="list-group-item">趣味娯楽: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 6) {
+                $('#expense-list').append(`
+              <li class="list-group-item">衣服: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 7) {
+                $('#expense-list').append(`
+              <li class="list-group-item">美容: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 8) {
+                $('#expense-list').append(`
+              <li class="list-group-item">交際費: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 9) {
+                $('#expense-list').append(`
+              <li class="list-group-item">教養: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 10) {
+                $('#expense-list').append(`
+              <li class="list-group-item">通信: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 11) {
+                $('#expense-list').append(`
+              <li class="list-group-item">住宅: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 12) {
+                $('#expense-list').append(`
+              <li class="list-group-item">水光熱費: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 13) {
+                $('#expense-list').append(`
+              <li class="list-group-item">医療: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 14) {
+                $('#expense-list').append(`
+              <li class="list-group-item">保険: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 15) {
+                $('#expense-list').append(`
+              <li class="list-group-item">投資: ${val['amount']}円</li>
+              `)
+              }
+              if (val['expenditure_item_id'] === 16) {
+                $('#expense-list').append(`
+              <li class="list-group-item">その他: ${val['amount']}円</li>
+              `)
+              }
             }
           })
+          // 前回選択した日付の情報でCSSのbackground-colorを初期化
+          $(`td[data-date = ${dateVal}]`).css("background-color", "")
+          // 選択した日付にCSSを設定
+          $(`td[data-date = ${e.dateStr}]`).css("background-color", "#fdf5e6")
+          dateVal = e.dateStr
         })
         // 通信に失敗したらアラート
         .fail(function () {
           alert('error');
-        });
+        })
     },
   })
-
   calendar.render();
 });

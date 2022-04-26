@@ -5,6 +5,9 @@ class IncomesController < ApplicationController
     @incomes = res.to_a
     gon.incomes = @incomes
 
+    ex_res = ActiveRecord::Base.connection.select_all("SELECT date, SUM(amount) AS total_amount FROM Expenses GROUP BY date")
+    gon.expenses = ex_res.to_a
+
     date = params[:date]
     @day_income = ActiveRecord::Base.connection.select_all("SELECT amount, income_item_id, memo FROM Incomes WHERE date = '#{date}'")
     gon.dayIncome = @day_income.to_a
@@ -38,8 +41,13 @@ class IncomesController < ApplicationController
 
   def card
     date = params[:date]
-    day_income = ActiveRecord::Base.connection.select_all("SELECT amount, income_item_id, memo FROM Incomes WHERE date = '#{date}'")
-    render json: day_income.to_a
+    day_income = ActiveRecord::Base.connection.select_all("SELECT amount, income_item_id, memo FROM Incomes WHERE date = '#{date}'").to_a
+    day_expense = ActiveRecord::Base.connection.select_all("SELECT amount, expenditure_item_id, memo FROM Expenses WHERE date = '#{date}'").to_a
+    day_expense.each do |expense|
+      day_income.push(expense)
+    end
+
+    render json: day_income
   end
 
   private
