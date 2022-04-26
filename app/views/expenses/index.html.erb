@@ -9,3 +9,5 @@
 <%= pie_chart @incomes.group(:income_item_id).sum(:amount), donut: true %>
 
 <%= pie_chart @incomesmonthly, donut: true %>
+
+<%= pie_chart @expensesmonthly, donut: true %>
