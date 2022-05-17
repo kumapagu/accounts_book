@@ -1,13 +1,12 @@
 <%# // ヘッダーapplicationに記述する  %>
 
 
-<%= link_to "前の月のリンク",expenses_path(month:@month.prev_month) %>
+<%= link_to "◀︎前の月",expenses_path(month:@month.prev_month) %>
 
-<%= link_to "次の月のリンク",expenses_path(month:@month.next_month) %>
+<%= @month.strftime("%Y年%m月") %>
 
+<%= link_to "次の月▶︎",expenses_path(month:@month.next_month) %>
 
-<%= pie_chart @incomes.group(:income_item_id).sum(:amount), donut: true %>
+<%= pie_chart @incomesmonthly, donut: true, legend: "bottom", title: "収入グラフ",width: "700px" %>
 
-<%= pie_chart @incomesmonthly, donut: true %>
-
-<%= pie_chart @expensesmonthly, donut: true %>
+<%= pie_chart @expensesmonthly, donut: true, legend: "bottom", title: "支出グラフ",width: "700px" %>
