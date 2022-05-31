@@ -1,0 +1,44 @@
+<div class="modal-body">
+
+  <%= form_with model: Income.find(id), local: true do |f| %>
+
+    <%# 日付入力フォーム %>
+    <div class="date-contents">
+      <div class="new-text">日付</div>
+      <%= raw sprintf(
+            f.date_select(
+                :date,
+                calss: "date-form",
+                use_month_numbers: true, # jan, febとかじゃなくて数字で月を表現
+                start_year:     2000, # 何年から表示させるか
+                end_year:       (Time.now.year), # 何年まで表示させるか
+                default:        Date.today, # 最初に表示されている年月日
+                date_separator:    '%s'), # 年月日区切りをそれぞれ指定
+                    '年 ', '月 ') + '日'
+      %>
+    </div>
+
+    <%# 金額入力フォーム%>
+    <div class="amount-contents">
+      <div class="new-text">金額</div>
+      <%= f.text_field :amount, class:"amount-form" %>
+    </div>
+
+    <%#カテゴリー入力フォーム%>
+    <div class="category-contents">
+      <div class="new-text">収入項目</div>
+      <%= f.collection_select(:income_item_id, IncomeItem.all, :id, :name, {}, {class: "select-box"} ) %>
+    </div>
+
+    <%# メモ入力フォーム%>
+    <div class="memo-contents">
+      <div class="new-text">メモ</div>
+      <%= f.text_area :memo, class:"memo-form"%>
+    </div>
+
+    <%# 登録ボタン %>
+    <%= f.submit "登録する", class:"submit-btn"%>
+
+  <% end %>
+</div>
+

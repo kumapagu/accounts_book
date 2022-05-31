@@ -1688,3 +1688,978 @@ Entrypoint application = js/application-1c5689266bba0c95f921.js js/application-1
 Completed 200 OK in 12910ms (Views: 12884.9ms | ActiveRecord: 0.0ms | Allocations: 1936389)
 
 
+Started GET "/" for ::1 at 2022-05-23 23:30:54 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 19.2ms | Allocations: 6537)
+  Rendered incomes/_expense.html.erb (Duration: 5.5ms | Allocations: 4406)
+  Rendered incomes/_edit.html.erb (Duration: 45.2ms | Allocations: 9458)
+  Rendered incomes/_expense.html.erb (Duration: 1.7ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 79.3ms | Allocations: 25148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2648ms (Views: 2604.9ms | ActiveRecord: 26.9ms | Allocations: 2174969)
+
+
+Started GET "/incomes/card/?date=2022-04-17" for ::1 at 2022-05-23 23:31:02 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-04-17"}
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 13.4ms | Allocations: 563)
+
+
+Started PATCH "/incomes/1" for ::1 at 2022-05-23 23:31:08 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"j/oyb//2OplTVmFuNqXJSdKsuQ1brOzfD3L8bj2oWlVC4KQJNbcso9BQxX/aIaZCDje1TBq3GmeJFo4MNnZckA==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"3", "date(3i)"=>"16", "amount"=>"2000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 14901ms (ActiveRecord: 87.4ms | Allocations: 393183)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:31:23 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.6ms | Allocations: 3425)
+  Rendered incomes/_expense.html.erb (Duration: 1.4ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 2.4ms | Allocations: 1778)
+  Rendered incomes/_expense.html.erb (Duration: 1.6ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 12557)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 1.9ms | Allocations: 21884)
+
+
+Started GET "/incomes/card/?date=2022-04-17" for ::1 at 2022-05-23 23:31:29 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-04-17"}
+Completed 200 OK in 26ms (Views: 0.7ms | ActiveRecord: 23.9ms | Allocations: 551)
+
+
+Started GET "/incomes/card/?date=2022-03-16" for ::1 at 2022-05-23 23:31:45 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-03-16"}
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 23.1ms | Allocations: 621)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:33:00 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.4ms | Allocations: 3422)
+  Rendered incomes/_expense.html.erb (Duration: 3.8ms | Allocations: 3541)
+  Rendered incomes/_edit.html.erb (Duration: 6.4ms | Allocations: 1780)
+  Rendered incomes/_expense.html.erb (Duration: 2.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 13571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 5.2ms | Allocations: 30270)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:33:03 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.6ms | Allocations: 3767)
+  Rendered incomes/_expense.html.erb (Duration: 3.4ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 3.4ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 3.2ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 14385)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 1.2ms | Allocations: 25395)
+
+
+Started POST "/incomes" for ::1 at 2022-05-23 23:33:11 +0900
+Processing by IncomesController#create as HTML
+  Parameters: {"authenticity_token"=>"exB7ZPhVdRtuTIbAfqMLtOye8aevQ4Lkk9EC24jf9T22Cu0CMhRjIe1KItGSJ2S/MAX95u5YdFwVtXC5gwHz+A==", "date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"500", "income_item_id"=>"2", "memo"=>"", "commit"=>"登録する"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 701)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: income):
+  
+app/controllers/incomes_controller.rb:65:in `income_params'
+app/controllers/incomes_controller.rb:24:in `create'
+Started POST "/incomes" for ::1 at 2022-05-23 23:33:53 +0900
+Processing by IncomesController#create as HTML
+  Parameters: {"authenticity_token"=>"exB7ZPhVdRtuTIbAfqMLtOye8aevQ4Lkk9EC24jf9T22Cu0CMhRjIe1KItGSJ2S/MAX95u5YdFwVtXC5gwHz+A==", "date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"500", "income_item_id"=>"2", "memo"=>"", "commit"=>"登録する"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 56.1ms | Allocations: 15179)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:33:53 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.2ms | Allocations: 3428)
+  Rendered incomes/_expense.html.erb (Duration: 17.9ms | Allocations: 4048)
+  Rendered incomes/_edit.html.erb (Duration: 3.4ms | Allocations: 1971)
+  Rendered incomes/_expense.html.erb (Duration: 2.9ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 13258)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 1.9ms | Allocations: 22759)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:33:57 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 515)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:34:33 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.6ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 5.9ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 6.7ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 14383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 2.1ms | Allocations: 24772)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:34:35 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 8.9ms | Allocations: 525)
+
+
+Started PATCH "/incomes/6" for ::1 at 2022-05-23 23:34:43 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"e8dkPubqWrLFSwsVX2aKiAiF4eBdylB7VEjycOwNWda23fJYLKtMiEZNrwSz4uWD1B7toRzRpsPSLIAS59NfEw==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"1000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"6"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 20408ms (ActiveRecord: 3.1ms | Allocations: 507277)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:35:04 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.8ms | Allocations: 3425)
+  Rendered incomes/_expense.html.erb (Duration: 1.6ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 4.2ms | Allocations: 1778)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 12556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 2.8ms | Allocations: 21915)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:35:54 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.7ms | Allocations: 3604)
+  Rendered incomes/_expense.html.erb (Duration: 3.6ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 54.2ms | Allocations: 7896)
+  Rendered incomes/_expense.html.erb (Duration: 1.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 64.1ms | Allocations: 19358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 33.7ms | ActiveRecord: 42.6ms | Allocations: 29650)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:35:56 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 521)
+
+
+Started PATCH "/incomes/6" for ::1 at 2022-05-23 23:36:01 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"v1/WyJoSYIe+JzBPmcVgfg1mdzxHPpjo1qWIc7EjH79yRUCuUFN2vT0hlF51QQ910f17fQYlblBQwfoRuv0Zeg==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"1000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"6"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4999ms (ActiveRecord: 52.4ms | Allocations: 139086)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:36:06 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.5ms | Allocations: 3420)
+  Rendered incomes/_expense.html.erb (Duration: 1.3ms | Allocations: 3541)
+  Rendered incomes/_edit.html.erb (Duration: 1.9ms | Allocations: 1775)
+  Rendered incomes/_expense.html.erb (Duration: 1.9ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 12547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 3.1ms | Allocations: 21893)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:36:22 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1290)
+
+
+Started PATCH "/incomes/6" for ::1 at 2022-05-23 23:36:30 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"mYHlwOmRXN+v3Jgu4WPFL4UaotxLcoZoZiZfmnH/ikFUm3OmI9BK5SzaPD8N56okWYGunQppcNDgQi34eiGMhA==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"2000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"6"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 56ms (ActiveRecord: 13.3ms | Allocations: 16457)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:36:30 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.5ms | Allocations: 3428)
+  Rendered incomes/_expense.html.erb (Duration: 4.0ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 2.9ms | Allocations: 1830)
+  Rendered incomes/_expense.html.erb (Duration: 2.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 13115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 30.3ms | ActiveRecord: 8.1ms | Allocations: 22620)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:44:05 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.5ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.6ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 348.2ms | Allocations: 177157)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 358.7ms | Allocations: 186068)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 6.0ms | Allocations: 189852)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007ff7e16e3cd8>:0x00007ff7e16e2338>
+Did you mean?  @@id):
+    1: <div class="modal-body">
+    2: 
+    3:   <%= form_with model: Income.find(id), local: true do |f| %>
+    4: 
+    5:     <%# 日付入力フォーム %>
+    6:     <div class="date-contents">
+  
+app/views/incomes/_edit.html.erb:3
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-23 23:44:22 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.9ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.3ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 4.5ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 3.1ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 14383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 4.2ms | Allocations: 24789)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:45:07 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.0ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 4.5ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 4.1ms | Allocations: 4301)
+  Rendered incomes/_expense.html.erb (Duration: 2.7ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 16555)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 2.2ms | Allocations: 26972)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:45:10 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 14.2ms | Allocations: 517)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:45:33 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 522)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:45:34 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 512)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:45:35 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 504)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:45:40 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.6ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.9ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 7.8ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 1.5ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 14383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 32.2ms | ActiveRecord: 12.2ms | Allocations: 24803)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-23 23:45:42 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 514)
+
+
+Started PATCH "/incomes/6" for ::1 at 2022-05-23 23:45:48 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"K4kumTXweDQ1hz8utexT1uhm71vWLtAwLd2ivn9Bcsrmk7j//7FuDraBmz9ZaDzdNP3jGpc1JoirudDcdJ90Dw==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"1000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"6"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 45.1ms | Allocations: 1578)
+
+
+Started GET "/" for ::1 at 2022-05-23 23:45:48 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.5ms | Allocations: 3427)
+  Rendered incomes/_expense.html.erb (Duration: 1.3ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 2.2ms | Allocations: 1778)
+  Rendered incomes/_expense.html.erb (Duration: 2.9ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 12558)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 1.7ms | Allocations: 21907)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:30:35 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 21.1ms | Allocations: 6538)
+  Rendered incomes/_expense.html.erb (Duration: 5.2ms | Allocations: 4406)
+  Rendered incomes/_edit.html.erb (Duration: 65.0ms | Allocations: 9458)
+  Rendered incomes/_expense.html.erb (Duration: 2.6ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 98.6ms | Allocations: 25132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3308ms (Views: 3248.5ms | ActiveRecord: 49.3ms | Allocations: 2195513)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:30:42 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 515)
+
+
+Started PATCH "/incomes/6" for ::1 at 2022-05-30 23:30:48 +0900
+Processing by IncomesController#update as HTML
+  Parameters: {"authenticity_token"=>"d12GG74Kq8jmQOHG8wosoMPgcuUL6iai4I9dxjz0roW6RxB9dEu98mVGRdcfjkOrH3t+pErx0Bpm6y+kNyqoQA==", "income"=>{"date(1i)"=>"2022", "date(2i)"=>"5", "date(3i)"=>"23", "amount"=>"1000", "income_item_id"=>"2", "memo"=>""}, "commit"=>"登録する", "id"=>"6"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 151ms (ActiveRecord: 112.0ms | Allocations: 10590)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:30:48 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.2ms | Allocations: 3425)
+  Rendered incomes/_expense.html.erb (Duration: 3.5ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 3.0ms | Allocations: 1778)
+  Rendered incomes/_expense.html.erb (Duration: 1.5ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 12557)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 3.1ms | Allocations: 21915)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:30:51 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 530)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:31:11 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 542)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:40:16 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.8ms | Allocations: 3604)
+  Rendered incomes/_expense.html.erb (Duration: 4.3ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 15.5ms | Allocations: 7987)
+  Rendered incomes/_expense.html.erb (Duration: 2.7ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 19448)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 1.6ms | Allocations: 29742)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:44:02 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 509)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:56:52 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.3ms | Allocations: 3604)
+  Rendered incomes/_expense.html.erb (Duration: 3.0ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 9.9ms | Allocations: 7993)
+  Rendered incomes/_expense.html.erb (Duration: 1.6ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 19455)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: d48ddbd223aa65aea5e9
+Version: webpack 4.46.0
+Time: 4590ms
+Built at: 2022/05/30 23:56:59
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56bf29105f6731121a93.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-56bf29105f6731121a93.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56bf29105f6731121a93.js js/application-56bf29105f6731121a93.js.map
+[./app/javascript/calendar.js] 7.44 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 7243ms (Views: 7239.6ms | ActiveRecord: 0.8ms | Allocations: 200218)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:57:02 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 522)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:58:48 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.7ms | Allocations: 3769)
+  Rendered incomes/_expense.html.erb (Duration: 3.0ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 283.3ms | Allocations: 178743)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 293.2ms | Allocations: 187395)
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 0.5ms | Allocations: 188886)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007ffe84b419c0>:0x00007ffe84b4b7e0>
+Did you mean?  @@id):
+    1: <div class="modal-body">
+    2: 
+    3:   <%= form_with model: Income.find(id), local: true do |f| %>
+    4: 
+    5:     <%# 日付入力フォーム %>
+    6:     <div class="date-contents">
+  
+app/views/incomes/_edit.html.erb:3
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-30 23:59:33 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.0ms | Allocations: 3430)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 326.9ms | Allocations: 177764)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 333.6ms | Allocations: 185383)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 4.4ms | Allocations: 186367)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007ffe84b419c0>:0x00007ffe8de7e9e0>
+Did you mean?  @@id):
+    1: <div class="modal-body">
+    2: 
+    3:   <%= form_with model: @income, local: true do |f| %>
+    4: 
+    5:     <%# 日付入力フォーム %>
+    6:     <div class="date-contents">
+  
+app/views/incomes/_edit.html.erb:3
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-30 23:59:37 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.3ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.4ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 3.0ms | Allocations: 4301)
+  Rendered incomes/_expense.html.erb (Duration: 1.3ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 16550)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.5ms | Allocations: 26852)
+
+
+Started GET "/" for ::1 at 2022-05-30 23:59:40 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.7ms | Allocations: 3426)
+  Rendered incomes/_expense.html.erb (Duration: 2.4ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 2.1ms | Allocations: 3378)
+  Rendered incomes/_expense.html.erb (Duration: 1.6ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 14156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.6ms | Allocations: 23412)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-30 23:59:43 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 531)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:00:35 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.0ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 2.5ms | Allocations: 3725)
+  Rendered incomes/_expense.html.erb (Duration: 1.3ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 15980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 2.4ms | Allocations: 26292)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:00:37 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.4ms | Allocations: 3426)
+  Rendered incomes/_expense.html.erb (Duration: 2.1ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 1.5ms | Allocations: 3377)
+  Rendered incomes/_expense.html.erb (Duration: 3.1ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 14156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 3.1ms | Allocations: 23405)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:00:39 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 533)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:01:25 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.9ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.8ms | Allocations: 3887)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 9636)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms | Allocations: 11135)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    162:           role="tabpanel"
+    163:           aria-labelledby="pills-edit-incomes-tab"
+    164:         >
+    165:           <%= render partial: "edit", locals: { id: @income.id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:01:27 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.1ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.2ms | Allocations: 3887)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 9630)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.4ms | Allocations: 11129)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    162:           role="tabpanel"
+    163:           aria-labelledby="pills-edit-incomes-tab"
+    164:         >
+    165:           <%= render partial: "edit", locals: { id: @income.id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:01:46 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.3ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.0ms | Allocations: 3888)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 9607)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms | Allocations: 11390)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    162:           role="tabpanel"
+    163:           aria-labelledby="pills-edit-incomes-tab"
+    164:         >
+    165:           <%= render partial: "edit", locals: { id: @income['id'] } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:01:47 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.8ms | Allocations: 3423)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 8265)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 8926)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    162:           role="tabpanel"
+    163:           aria-labelledby="pills-edit-incomes-tab"
+    164:         >
+    165:           <%= render partial: "edit", locals: { id: @income['id'] } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:01:57 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.2ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 2.2ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 2.7ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 1.9ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 14383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 2.3ms | Allocations: 24693)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:01:59 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 526)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:09:06 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.6ms | Allocations: 3604)
+  Rendered incomes/_expense.html.erb (Duration: 3.6ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 10.5ms | Allocations: 8010)
+  Rendered incomes/_expense.html.erb (Duration: 1.5ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 19471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.9ms | Allocations: 29658)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:09:07 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 547)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:10:46 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.5ms | Allocations: 3422)
+  Rendered incomes/_expense.html.erb (Duration: 1.3ms | Allocations: 3541)
+  Rendered incomes/_edit.html.erb (Duration: 2.3ms | Allocations: 1775)
+  Rendered incomes/_expense.html.erb (Duration: 1.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 12549)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 5b51c961fef7a349a534
+Version: webpack 4.46.0
+Time: 4221ms
+Built at: 2022/05/31 0:10:53
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6d1351e5a88b10f89396.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-6d1351e5a88b10f89396.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6d1351e5a88b10f89396.js js/application-6d1351e5a88b10f89396.js.map
+[./app/javascript/calendar.js] 7.46 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 6789ms (Views: 6784.4ms | ActiveRecord: 3.1ms | Allocations: 183962)
+
+
+Started GET "/incomes/card/?date=2022-05-16" for ::1 at 2022-05-31 00:10:55 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-16"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 463)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:10:57 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 541)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:11:39 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.1ms | Allocations: 3422)
+  Rendered incomes/_expense.html.erb (Duration: 1.5ms | Allocations: 3541)
+  Rendered incomes/_edit.html.erb (Duration: 2.5ms | Allocations: 1775)
+  Rendered incomes/_expense.html.erb (Duration: 1.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 12549)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Hash: d48ddbd223aa65aea5e9
+Version: webpack 4.46.0
+Time: 3240ms
+Built at: 2022/05/31 0:11:44
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56bf29105f6731121a93.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-56bf29105f6731121a93.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56bf29105f6731121a93.js js/application-56bf29105f6731121a93.js.map
+[./app/javascript/calendar.js] 7.44 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 4971ms (Views: 4968.0ms | ActiveRecord: 1.5ms | Allocations: 143926)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:11:46 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 520)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:17:44 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.1ms | Allocations: 3604)
+  Rendered incomes/_expense.html.erb (Duration: 2.7ms | Allocations: 4046)
+  Rendered incomes/_edit.html.erb (Duration: 8.8ms | Allocations: 7993)
+  Rendered incomes/_expense.html.erb (Duration: 1.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 19454)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 1.6ms | Allocations: 29645)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:17:46 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 526)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:19:30 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.2ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.8ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 7.9ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 3.3ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 14400)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 36.9ms | ActiveRecord: 5.3ms | Allocations: 24718)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:19:33 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 533)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:20:00 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.6ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.2ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 2.6ms | Allocations: 2126)
+  Rendered incomes/_expense.html.erb (Duration: 2.0ms | Allocations: 3543)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 14398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 2.1ms | Allocations: 24698)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:20:02 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 520)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:26:25 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.8ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.3ms | Allocations: 3887)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 303.6ms | Allocations: 184378)
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 1.0ms | Allocations: 185881)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007ffe8bfcca88>:0x00007ffe8bfd7000>
+Did you mean?  @@id):
+    162:           aria-labelledby="pills-edit-incomes-tab"
+    163:         >
+    164:         
+    165:           <%= render partial: "edit", locals: { id: id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:26:35 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 2.2ms | Allocations: 3423)
+  Rendered incomes/_expense.html.erb (Duration: 6.4ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 326.1ms | Allocations: 183025)
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 21.4ms | Allocations: 183690)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x00007ffe8bfcca88>:0x00007ffe8d31dc68>
+Did you mean?  @@id):
+    162:           aria-labelledby="pills-edit-incomes-tab"
+    163:         >
+    164:         
+    165:           <%= render partial: "edit", locals: { id: id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:26:49 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.3ms | Allocations: 3768)
+  Rendered incomes/_expense.html.erb (Duration: 3.9ms | Allocations: 3887)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 10624)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.6ms | Allocations: 12125)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@id in #<Class:0x00007ffe889f7f70>):
+    162:           aria-labelledby="pills-edit-incomes-tab"
+    163:         >
+    164:         
+    165:           <%= render partial: "edit", locals: { id: @@id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:26:51 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.7ms | Allocations: 3423)
+  Rendered incomes/_expense.html.erb (Duration: 1.5ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 9283)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.0ms | Allocations: 9946)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@id in #<Class:0x00007ffe889f7f70>):
+    162:           aria-labelledby="pills-edit-incomes-tab"
+    163:         >
+    164:         
+    165:           <%= render partial: "edit", locals: { id: @@id } %>
+    166:         </div>
+    167:         <div
+    168:           class="tab-pane fade"
+  
+app/views/incomes/index.html.erb:165
+Started GET "/" for ::1 at 2022-05-31 00:28:43 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 4.1ms | Allocations: 3984)
+  Rendered incomes/_expense.html.erb (Duration: 2.2ms | Allocations: 3887)
+  Rendered incomes/_edit.html.erb (Duration: 3.0ms | Allocations: 3061)
+  Rendered incomes/_expense.html.erb (Duration: 1.7ms | Allocations: 3616)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 15874)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: ded44be07019f6925c83
+Version: webpack 4.46.0
+Time: 4146ms
+Built at: 2022/05/31 0:28:50
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-440e94a15c727f73f7f5.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-440e94a15c727f73f7f5.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-440e94a15c727f73f7f5.js js/application-440e94a15c727f73f7f5.js.map
+[./app/javascript/calendar.js] 7.51 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 6713ms (Views: 6710.0ms | ActiveRecord: 1.6ms | Allocations: 177894)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:28:52 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 520)
+
+
+Started GET "/" for ::1 at 2022-05-31 00:29:17 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 1.9ms | Allocations: 3427)
+  Rendered incomes/_expense.html.erb (Duration: 3.1ms | Allocations: 3542)
+  Rendered incomes/_edit.html.erb (Duration: 4.8ms | Allocations: 1778)
+  Rendered incomes/_expense.html.erb (Duration: 2.3ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 12558)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2022-05-31 00:29:20 +0900
+Processing by IncomesController#index as HTML
+  Rendering incomes/index.html.erb within layouts/application
+  Rendered incomes/_new.html.erb (Duration: 3.6ms | Allocations: 3421)
+  Rendered incomes/_expense.html.erb (Duration: 3.2ms | Allocations: 3541)
+  Rendered incomes/_edit.html.erb (Duration: 2.4ms | Allocations: 1775)
+  Rendered incomes/_expense.html.erb (Duration: 1.9ms | Allocations: 3541)
+  Rendered incomes/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 12548)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Hash: d48ddbd223aa65aea5e9
+Version: webpack 4.46.0
+Time: 5088ms
+Built at: 2022/05/31 0:29:24
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56bf29105f6731121a93.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-56bf29105f6731121a93.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56bf29105f6731121a93.js js/application-56bf29105f6731121a93.js.map
+[./app/javascript/calendar.js] 7.44 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 7412ms (Views: 7408.8ms | ActiveRecord: 2.4ms | Allocations: 215156)
+
+
+[Webpacker] Compiled all packs in /Users/kn/original/accounts_book/public/packs
+[Webpacker] Hash: d48ddbd223aa65aea5e9
+Version: webpack 4.46.0
+Time: 4517ms
+Built at: 2022/05/31 0:29:27
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-56bf29105f6731121a93.js   3.03 MiB  application  [emitted] [immutable]  application
+js/application-56bf29105f6731121a93.js.map    2.9 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-56bf29105f6731121a93.js js/application-56bf29105f6731121a93.js.map
+[./app/javascript/calendar.js] 7.44 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 826 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 405 hidden modules
+
+Completed 200 OK in 6597ms (Views: 6546.7ms | ActiveRecord: 49.1ms | Allocations: 194281)
+
+
+Started GET "/incomes/card/?date=2022-05-23" for ::1 at 2022-05-31 00:29:29 +0900
+Processing by IncomesController#card as */*
+  Parameters: {"date"=>"2022-05-23"}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 542)
+
+
