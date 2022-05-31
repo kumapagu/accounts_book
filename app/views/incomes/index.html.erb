@@ -110,3 +110,77 @@
     </div>
   </div>
 </div>
+
+<!-- 編集用モーダル -->
+<%# <a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a> %>
+  <%# <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+  </svg> %>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-edit-incomes-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-edit-incomes"
+              type="button"
+              role="tab"
+              aria-controls="pills-edit-incomes"
+              aria-selected="true"
+            >
+              収入
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-edit-expenses-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-edit-expenses"
+              type="button"
+              role="tab"
+              aria-controls="pills-edit-expenses"
+              aria-selected="false"
+            >
+              支出
+            </button>
+          </li>
+        </ul>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-edit-incomes"
+          role="tabpanel"
+          aria-labelledby="pills-edit-incomes-tab"
+        >
+
+          <%= render partial: "edit", locals: { id: 6 } %>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-edit-expenses"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+        
+            <%= render "expense" %>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-edit-expenses"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -75,17 +75,17 @@ window.addEventListener('load', function () {
             if ('income_item_id' in val) { // income_item_idのキーがあればincome-listへappend
               if (val['income_item_id'] === 2) {
                 $('#income-list').append(`
-                <li class="list-group-item">給料: ${val['amount']}円</li>
+                <li class="list-group-item">給料: ${val['amount']}円<a href="/incomes/${val['id']}/edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal">編集</a></li>
                 `)
               }
               if (val['income_item_id'] === 3) {
                 $('#income-list').append(`
-              <li class="list-group-item">臨時収入: ${val['amount']}円</li>
-              `)
+                <li class="list-group-item">臨時収入: ${val['amount']}円<a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a>/li>
+                `)
               }
               if (val['income_item_id'] === 4) {
                 $('#income-list').append(`
-              <li class="list-group-item">その他: ${val['amount']}円</li>
+              <li class="list-group-item">その他: ${val['amount']}円<a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a></li>
               `)
               }
             }
