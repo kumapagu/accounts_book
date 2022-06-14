@@ -22,7 +22,6 @@ class IncomesController < ApplicationController
 
   def create
     @income = Income.new(income_params)
-    # binding.pry
     if @income.save
       redirect_to root_path
     else
@@ -31,8 +30,12 @@ class IncomesController < ApplicationController
   end
 
   def edit
-    binding.pry
-    @income = Income.find(params[:id])
+    
+    # binding.pry
+    $income = ''
+    $income = Income.find(params[:id])
+    puts $income.id
+
   end
 
   def update

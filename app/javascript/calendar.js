@@ -77,10 +77,15 @@ window.addEventListener('load', function () {
                 $('#income-list').append(`
                 <li class="list-group-item">給料: ${val['amount']}円<a href="/incomes/${val['id']}/edit" type="button" data-bs-toggle="modal" data-bs-target="#editModal">編集</a></li>
                 `)
+                $.ajax({
+                  url: `incomes/${val['id']}/edit`,
+                  type: 'get',
+                  async: true
+                  })
               }
               if (val['income_item_id'] === 3) {
                 $('#income-list').append(`
-                <li class="list-group-item">臨時収入: ${val['amount']}円<a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a>/li>
+                <li class="list-group-item">臨時収入: ${val['amount']}円<a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a></li>
                 `)
               }
               if (val['income_item_id'] === 4) {
@@ -88,6 +93,7 @@ window.addEventListener('load', function () {
               <li class="list-group-item">その他: ${val['amount']}円<a type="button" class="rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal">編集</a></li>
               `)
               }
+             
             }
             if ('expenditure_item_id' in val) { // expenditure_item_idのキーがあればexpense-listへappend
               if (val['expenditure_item_id'] === 2) {
@@ -173,10 +179,13 @@ window.addEventListener('load', function () {
           $(`td[data-date = ${e.dateStr}]`).css("background-color", "#fdf5e6")
           dateVal = e.dateStr
         })
+        console.log('card-------------------------')
+        
         // 通信に失敗したらアラート
         .fail(function () {
           alert('error');
         })
+        
     },
   })
   calendar.render();
